@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <style>
+        .container {
+            display: flex;
+            margin-left: 50px;
+        }
+        .image {
+            margin-right: 80px; 
+        }
+        .text {
+            width: 500px; /* width */
+        }
+        .image-label {
+            font-weight: bold;
+        }
+        .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(173, 216, 230, 0.5); /* the rgba values for the desired color and transparency */
+      z-index: -1; /* Ensuring  that the overlay is above other content */
+    }
+    </style>
+</head>
+<body>
+    <h1>Analytics</h1>
+    <div class="container">
+        <div class="image">
+            <p class="image-label">Heart Disease Prevalence by Sex</p>
+            <img src="{{ url_for('static', filename='bar_plot.png') }}" alt="Heart Disease Prevalence by Sex">
+            <p>Male population has more heart disease patients than no heart disease patients.</p>
+            <p>the case of Female population, heart disease patients are less than no heart disease patients.</p>
+       
+        </div>
+        
+        <div class="image">
+            <p class="image-label">Chest Pain Type vs. Heart Disease Pie Chart</p>
+            <img src="{{ url_for('static', filename='pie_chart.png') }}" alt="Chest Pain Type vs. Heart Disease Pie Chart">
+            <p>The people who suffer from ASY-type chest pain are more prone to have heart diseases like heart attack,</p>
+            <p></p>blockage of blood flow or possible heart damage as compared to others. </p>
+            <p>While with TA-type chest pain shows least sign of heart diseases.</p>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image">
+            <p class="image-label">Age Distribution by Heart Disease</p>
+            <img src="{{ url_for('static', filename='age_distribution_by_heart_disease.png') }}" alt="Age Distribution by Heart Disease">
+            <p>TAccording to the graph above, heart disease is very common in the seniors who </p>
+            <p>are in the age group of 50 and above and common among adults who belong to the age group of 41 to 50. </p>
+        </div>
+        <div class="image">
+            <p class="image-label">Age vs Resting BP Scatter Plot</p>
+            <img src="{{ url_for('static', filename='age_vs_resting_bp_scatter.png') }}" alt="Age vs Resting BP Scatter Plot">
+            <p>According to the graph generated above, we can conclude that higher resting BP is more common among the adults and seniors in the age group </p>
+            <p>of 30 to 80 while higher resting BP is not that common among young people with the age group of 0 to 30.</p>
+        </div>
+    </div>
+    <!-- adding the background color -->
+    <div class="background-overlay"></div>
+</body>
+</html>
