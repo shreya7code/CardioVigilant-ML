@@ -46,7 +46,7 @@ Clone the repository and run locally:
 
 ```bash
 git clone https://github.com/<your-username>/CardioVigilant-ML.git
-cd CardioVigilant-ML/src/phase_3
+cd CardioVigilant-ML/src/phase3_CardioVigilant
 python app.py
 ```
 
